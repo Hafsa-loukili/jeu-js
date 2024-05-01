@@ -1,0 +1,142 @@
+body{
+  background: #e0e3eb;
+  font-family: 'Bellota', cursive;
+
+
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+}
+
+.buttons {
+ 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding-top: 50PX;
+  text-align: center;
+  max-width: 300px;
+  height: 350px;
+  width: 100%;
+  border-radius: 0px 0PX 12PX 12PX;
+  padding: 20px 20px 20px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+
+}
+#calculator {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.operator {
+  color:#2f9fff;
+
+}
+.buttons button.operator:hover {
+  background-color: #2f9fff;
+  color: #fff;
+}
+
+.titre{
+
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.bare{
+  background-color: black;
+  width: 7PX;
+  height: 250PX;
+  margin: 10PX;
+  border-radius: 10PX;
+}
+h1{
+  margin: 10PX;
+  font-size: 55PX;
+}
+
+button{
+ 
+  
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #f7f7f7;
+  
+
+  
+}
+
+.display {
+  margin-top: 30PX;
+  border :none;
+  width: 300PX;
+  padding: 50PX 20PX 20PX;
+  outline: none;
+  font-size: 20PX;
+   
+}
+.buttons button:hover {
+  background-color: #2f9fff;
+  color: #fff;
+}
+/* Styles pour les petits écrans */
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center; /* Centrer verticalement */
+    padding: 20px;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Afficher 4 boutons par ligne */
+    grid-gap: 10px;
+    max-width: 300px;
+    height: auto;
+    padding: 20px;
+    text-align: center; /* Centrer les boutons */
+    overflow: auto; /* Ajouter un défilement automatique si nécessaire */
+  }
+
+  .display {
+    width: 300PX; /* Calculer la largeur de l'input pour qu'elle ne soit pas égale à la largeur de .buttons */
+    margin-top: 20px;
+    
+    /* Ajouter un espace entre la calculatrice et le champ de texte */
+  }
+
+  .bare {
+    display: none; /* Masquer la barre sur les petits écrans */
+  }
+
+  .titre {
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 20px; /* Ajouter un espace en bas */
+  }
+
+  h1 {
+    font-size: 30px; /* Réduire la taille du texte */
+    margin: 5px; /* Ajuster la marge */
+  }
+
+  body {
+    overflow-x: hidden; /* Empêcher le défilement horizontal */
+    overflow-y: auto; /* Activer le défilement vertical si nécessaire */
+  }
+
+}
+
+
